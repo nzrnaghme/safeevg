@@ -1,0 +1,16 @@
+.spw-loading {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  place-content: center;
+  justify-items: center;
+  gap: .7rem;
+  margin: 0;
+  background: #15232f;
+  color: #f6f4ef;
+  font: 600 .875rem/1.5 system-ui, sans-serif;
+}
+.spw-loading img { display: block; width: 112px; height: 112px; object-fit: contain; }
+.spw-logo img { display: block; width: 36px; height: 36px; object-fit: contain; }
+
+body:has(.spw-loading) { margin: 0; }

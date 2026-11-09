@@ -1,0 +1,40 @@
+# EVG
+
+> EV charging, solar and battery storage project planning for homes, public places, businesses and fleets.
+
+## Pages
+- [EV Charging, Solar & Battery Storage](https://safeevg.com/): Plan home, public and fleet EV charging with EVG. Explore solar, battery storage, equipment and site assessment for Southern California properties.
+- [EV Charging Solutions](https://safeevg.com/ev-charging): Explore home, apartment, workplace, public and fleet EV charging. Compare options based on parking time, vehicle needs and electrical capacity.
+- [Home EV Charging](https://safeevg.com/solutions/home): Plan residential EV charging around your daily drive, parking space and electrical capacity. Explore home chargers and prepare for an assessment.
+- [Apartment & HOA EV Charging](https://safeevg.com/solutions/apartments): Plan apartment and HOA EV charging with shared capacity, resident access, billing and future growth considered from the start.
+- [Commercial & Workplace EV Charging](https://safeevg.com/solutions/commercial): Explore charging for employees, customers and guests. Compare charging speeds, operating models and electrical needs for your business property.
+- [Public DC Fast Charging](https://safeevg.com/solutions/public-dc): Plan public fast charging around local demand, power availability, electricity costs and site operations. Compare equipment and assessment priorities.
+- [Fleet & Depot EV Charging](https://safeevg.com/solutions/fleets): Plan fleet, electric bus and truck charging around routes, return times, vehicle energy needs and depot electrical capacity.
+- [EV Charger Equipment Catalog](https://safeevg.com/equipment): Compare Tesla and ABB charger references for homes, workplaces, public sites and fleets. Filter equipment and review model specifications.
+- [EV Charging Funding & Incentives](https://safeevg.com/funding): Understand incentives, utility infrastructure support and financing for EV charging. Review project preparation steps and official program resources.
+- [Our EV Charging Project Process](https://safeevg.com/approach): Follow the EVG process from discovery and electrical assessment through scope, utility coordination, installation and commissioning.
+- [Solar Energy & Battery Storage](https://safeevg.com/solar): Explore rooftop solar, battery storage and EV charging together. Plan around property conditions, electricity use and future energy needs.
+- [EV Charging Planning Resources](https://safeevg.com/resources): Find manufacturer references and practical planning resources. Prepare a project brief, explore common questions and test project assumptions.
+- [EV Charging Questions & Answers](https://safeevg.com/faq): Get answers about charger selection, electrical upgrades, charging speeds, solar integration, operations and funding considerations.
+- [About EVG](https://safeevg.com/about): Learn how EVG approaches EV charging, solar and battery storage planning with clear scope, site-specific decisions and ongoing operations in mind.
+- [Plan Your EV Charging Project](https://safeevg.com/contact): Prepare an EV charging or energy project brief. Share your property goals, charging needs and timing, then review an email draft for an assessment.
+- [EV Charging Economics Calculator](https://safeevg.com/economics): Test an illustrative charging cash flow model. Adjust utilization, electricity costs and operating expenses to understand how assumptions affect results.
+- [Privacy Information](https://safeevg.com/privacy): Read how the EVG project brief works, what stays in your browser and what happens when you choose to share information through your email app.
+- [EV Charging Project Support](https://safeevg.com/how-we-help): Explore EVG support for assessment, equipment selection, utility and permit coordination, installation planning and charging operations.
+- [Charging for Property Owners & Developers](https://safeevg.com/property-owners): Explore EV charging planning for property owners and developers. Consider site use, capacity, ownership and long-term operating needs.
+- [EV Charging Ownership & Financing](https://safeevg.com/ownership-financing): Compare EV charging ownership and financing considerations, including upfront costs, operating responsibilities, pricing and project terms.
+- [EV Charging Operations & Maintenance](https://safeevg.com/operations-maintenance): Plan charging operations, driver support, maintenance and handover responsibilities to keep your site ready for the people who use it.
+- [Tesla Universal Wall Connector](https://safeevg.com/equipment/universal): Review Tesla Universal Wall Connector technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB Terra AC Wallbox 40A](https://safeevg.com/equipment/ac40): Review ABB Terra AC Wallbox 40A technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB Terra AC Wallbox 80A](https://safeevg.com/equipment/ac80): Review ABB Terra AC Wallbox 80A technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB Terra DC Wallbox](https://safeevg.com/equipment/dcwall): Review ABB Terra DC Wallbox technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB Terra 54HV](https://safeevg.com/equipment/terra54): Review ABB Terra 54HV technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB Terra 124](https://safeevg.com/equipment/terra124): Review ABB Terra 124 technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB Terra 184](https://safeevg.com/equipment/terra184): Review ABB Terra 184 technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB Terra 360 UL](https://safeevg.com/equipment/terra360): Review ABB Terra 360 UL technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB Terra HP](https://safeevg.com/equipment/hp): Review ABB Terra HP technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB A200 / A300 / A400](https://safeevg.com/equipment/a400): Review ABB A200 / A300 / A400 technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [ABB HVC-C Depot Charging](https://safeevg.com/equipment/depot): Review ABB HVC-C Depot Charging technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+- [Tesla Gen 3 Mobile Connector](https://safeevg.com/equipment/mobile): Review Tesla Gen 3 Mobile Connector technical specifications, connector options and electrical requirements. Compare equipment and plan the installation for your site.
+
+Equipment specifications and funding conditions require project-specific confirmation. The economics calculator is illustrative. The contact form prepares a local brief and optional email draft.

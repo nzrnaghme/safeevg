@@ -1,0 +1,26 @@
+kind = "web"
+previewPath = "/"
+title = "Safe Public Works"
+description = "A customer-facing website for Safe Public Works, helping homeowners and businesses explore solar energy and EV charging and request a tailored project quote."
+version = "1.0.0"
+id = "artifacts/safe-public-works"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22695
+
+[services.development]
+run = "pnpm --filter @workspace/safe-public-works run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/safe-public-works", "run", "build" ]
+
+
+[services.production.run]
+args = ["node", "artifacts/safe-public-works/serve.mjs"]
+
+[services.env]
+PORT = "22695"
+BASE_PATH = "/"
