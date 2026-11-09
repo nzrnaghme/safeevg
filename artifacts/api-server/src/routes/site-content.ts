@@ -23,7 +23,7 @@ function ensureTable() {
 
 function password() {
   const secret = process.env.SPW_ADMIN_PASSWORD;
-  return secret && secret.length >= 16 ? secret : undefined;
+  return secret && secret.length >= 8 ? secret : undefined;
 }
 
 function sign(value: string, secret: string) {

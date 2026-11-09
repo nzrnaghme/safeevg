@@ -10,7 +10,7 @@ Set product as production branch; main currently contains only README. Feature P
 
 ## Environment
 
-Configure DATABASE_URL for PostgreSQL reachable from Vercel and SPW_ADMIN_PASSWORD (at least 16 characters) in Vercel Environment Variables, never in Git. Use a separate preview database. Replit-local database addresses cannot be reused; migrate the schema and approved CMS content to an external database. Do not copy customer inquiries without a deliberate migration. Admin login throttling currently uses process memory; add shared or platform rate limiting for serverless production.
+Configure DATABASE_URL for PostgreSQL reachable from Vercel and SPW_ADMIN_PASSWORD (at least 8 characters) in Vercel Environment Variables, never in Git. Use a separate preview database. Replit-local database addresses cannot be reused; migrate the schema and approved CMS content to an external database. Do not copy customer inquiries without a deliberate migration. Admin login throttling currently uses process memory; add shared or platform rate limiting for serverless production.
 
 ## Verification and domain
 
