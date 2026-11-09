@@ -1,4 +1,5 @@
-import { createHash, createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
+import { createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
+import { validAdminCredentials } from '../lib/admin-credentials';
 import { Router, type Request } from 'express';
 import { pool } from '@workspace/db';
 
@@ -23,10 +24,6 @@ function ensureTable() {
 function password() {
   const secret = process.env.SPW_ADMIN_PASSWORD;
   return secret && secret.length >= 16 ? secret : undefined;
-}
-
-function digest(value: string) {
-  return createHash('sha256').update(value).digest();
 }
 
 function sign(value: string, secret: string) {
@@ -102,10 +99,10 @@ router.get('/admin/session', (request, response) => {
 });
 router.post('/admin/session', (request, response) => {
   const secret = password();
-  if (!secret) { response.status(503).json({ error: 'Set SPW_ADMIN_PASSWORD in Replit Secrets to enable sign-in.' }); return; }
+  if (!secret) { response.status(503).json({ error: 'Admin sign-in is not configured. Contact the site administrator.' }); return; }
   if (!request.is('application/json') || !string(request.body?.password, 1024)) { response.sendStatus(400); return; }
   if (limited(request)) { response.status(429).json({ error: 'Too many attempts. Try again in 15 minutes.' }); return; }
-  if (!timingSafeEqual(digest(request.body.password), digest(secret))) { response.status(401).json({ error: 'Incorrect password.' }); return; }
+  if (!validAdminCredentials(request.body?.email, request.body.password, secret)) { response.status(401).json({ error: 'Incorrect email or password.' }); return; }
   attempts.delete(request.ip ?? 'unknown');
   const token = Math.floor(Date.now() / 1000 + sessionSeconds) + '.' + randomBytes(16).toString('hex');
   response.cookie(cookie, token + '.' + sign(token, secret), { httpOnly: true, secure: true, sameSite: 'strict', maxAge: sessionSeconds * 1000, path: '/api/admin' });
