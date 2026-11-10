@@ -56,7 +56,7 @@ function Logo({ compact = false }: { compact?: boolean }) {
     <a href="#top" className="flex items-center gap-2.5" aria-label="Safeevg home">
       <img src="/brand-logo.webp" alt="" width={36} height={36} className="h-9 w-9 shrink-0 object-contain" />
       <span className={compact ? "hidden sm:block" : "block"}>
-        <span className="block text-[11px] font-extrabold leading-[.9] tracking-[.02em] text-white">Safeevg</span>
+        <span className="block display-font text-[22px] sm:text-[24px] font-bold leading-none tracking-[-.035em] text-white whitespace-nowrap">Safeevg</span>
       </span>
     </a>
   );
