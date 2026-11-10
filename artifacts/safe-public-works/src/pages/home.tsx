@@ -53,10 +53,10 @@ const ORANGE = "#f26b2a";
 
 function Logo({ compact = false }: { compact?: boolean }) {
   return (
-    <a href="#top" className="flex items-center gap-2.5" aria-label="EVG home">
+    <a href="#top" className="flex items-center gap-2.5" aria-label="Safeevg home">
       <img src="/brand-logo.webp" alt="" width={36} height={36} className="h-9 w-9 shrink-0 object-contain" />
       <span className={compact ? "hidden sm:block" : "block"}>
-        <span className="block text-[11px] font-extrabold leading-[.9] tracking-[.02em] text-white">EVG</span>
+        <span className="block text-[11px] font-extrabold leading-[.9] tracking-[.02em] text-white">Safeevg</span>
       </span>
     </a>
   );

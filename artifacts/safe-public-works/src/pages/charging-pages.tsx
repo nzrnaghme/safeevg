@@ -16,7 +16,7 @@ const image = (name: string) => name === 'solar' ? '/equipment-photos/solar.webp
 const incentiveQuestion = ['Are incentives available for my project?', 'Eligibility depends on the project address, serving utility, equipment and current program terms. See Funding & incentives for official resources.'];
 
 function Logo() {
-  return <a className="spw-logo" href="/" aria-label="EVG home"><img src="/brand-logo.webp" alt="" width={36} height={36} /><strong>EVG</strong></a>;
+  return <a className="spw-logo" href="/" aria-label="Safeevg home"><img src="/brand-logo.webp" alt="" width={36} height={36} /><strong>Safeevg</strong></a>;
 }
 function Action({ href = project, children = 'Plan your project', outline = false }: { href?: string; children?: ReactNode; outline?: boolean }) {
   return <a className={'spw-action' + (outline ? ' spw-outline' : '')} href={href}>{children}<ArrowUpRight size={17} aria-hidden="true" /></a>;
