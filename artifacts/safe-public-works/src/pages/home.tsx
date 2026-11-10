@@ -38,7 +38,7 @@ const footerLinks: Record<string, string> = {
   'Funding & incentives': '/funding',
   'Our approach': '/approach',
   'Request an assessment': '/contact',
-  'About EVG': '/about',
+  'About Safeevg': '/about',
   'Guides & documents': '/resources',
   'Common questions': '/faq',
   'Project economics': '/economics',
@@ -179,7 +179,7 @@ export default function Home() {
         onFocusCapture={() => setSliderPaused(true)}
         onBlurCapture={() => setSliderPaused(false)}
       >
-        <div className="absolute inset-0" role="region" aria-roledescription="carousel" aria-label="EVG energy projects">
+        <div className="absolute inset-0" role="region" aria-roledescription="carousel" aria-label="Safeevg energy projects">
           {heroSlides.map((slide, index) => (
             <img
               key={slide.alt}
@@ -327,8 +327,8 @@ export default function Home() {
       </section>
 
       <footer className="bg-[#172630] px-5 py-12 text-white lg:px-8">
-        <div className="mx-auto grid max-w-[1240px] gap-10 border-b border-white/10 pb-10 md:grid-cols-[1.3fr_repeat(3,1fr)]"><div><Logo /><p className="mt-6 max-w-xs text-xs leading-5 text-white/70">Practical energy.<br />Thoughtfully planned for your property.</p></div>{[["SOLUTIONS","EV charging","Solar energy","Apartments & HOAs","Fleets & depots"],["PLAN YOUR PROJECT","Explore equipment","Funding & incentives","Our approach","Request an assessment"],["COMPANY & RESOURCES","About EVG","Guides & documents","Common questions","Project economics", "How we can help", "Property owners & developers", "Ownership & financing", "Operations & maintenance"]].map(group => <div key={group[0]}><p className="text-[9px] font-bold tracking-[.15em] text-white/70">{group[0]}</p><div className="mt-5 grid gap-3 text-xs text-white/70">{group.slice(1).map(item => <a key={item} href={footerLinks[item]} className="hover:text-white">{item}</a>)}</div></div>)}</div>
-        <div className="mx-auto flex max-w-[1240px] flex-col justify-between gap-3 pt-6 text-[9px] text-white/70 sm:flex-row"><span>© {new Date().getFullYear()} EVG. All rights reserved.</span><span>Southern California · <a href="/privacy">Privacy information</a></span></div>
+        <div className="mx-auto grid max-w-[1240px] gap-10 border-b border-white/10 pb-10 md:grid-cols-[1.3fr_repeat(3,1fr)]"><div><Logo /><p className="mt-6 max-w-xs text-xs leading-5 text-white/70">Practical energy.<br />Thoughtfully planned for your property.</p></div>{[["SOLUTIONS","EV charging","Solar energy","Apartments & HOAs","Fleets & depots"],["PLAN YOUR PROJECT","Explore equipment","Funding & incentives","Our approach","Request an assessment"],["COMPANY & RESOURCES","About Safeevg","Guides & documents","Common questions","Project economics", "How we can help", "Property owners & developers", "Ownership & financing", "Operations & maintenance"]].map(group => <div key={group[0]}><p className="text-[9px] font-bold tracking-[.15em] text-white/70">{group[0]}</p><div className="mt-5 grid gap-3 text-xs text-white/70">{group.slice(1).map(item => <a key={item} href={footerLinks[item]} className="hover:text-white">{item}</a>)}</div></div>)}</div>
+        <div className="mx-auto flex max-w-[1240px] flex-col justify-between gap-3 pt-6 text-[9px] text-white/70 sm:flex-row"><span>© {new Date().getFullYear()} Safeevg. All rights reserved.</span><span>Southern California · <a href="/privacy">Privacy information</a></span></div>
       </footer>
 
       {showTop && <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="fixed bottom-5 right-5 z-50 grid h-12 w-12 place-items-center rounded-full bg-[#f26b2a] text-white shadow-xl transition hover:-translate-y-1" aria-label="Back to top"><ArrowUp size={20} /></button>}

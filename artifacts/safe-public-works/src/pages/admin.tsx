@@ -110,7 +110,7 @@ export default function Admin() {
   const dirty = Boolean(saved && draft && draft !== saved.content);
 
   useEffect(() => {
-    document.title = 'Website admin | EVG';
+    document.title = 'Website admin | Safeevg';
     const meta = document.createElement('meta');
     meta.name = 'robots';
     meta.content = 'noindex, nofollow';
@@ -177,7 +177,7 @@ export default function Admin() {
     finally { setBusy(false); }
   }
 
-  return <main className="spw-admin"><header><div><p>EVG</p><h1>Website admin</h1></div><a href="/" target="_blank" rel="noreferrer">View website ↗</a></header>
+  return <main className="spw-admin"><header><div><p>Safeevg</p><h1>Website admin</h1></div><a href="/" target="_blank" rel="noreferrer">View website ↗</a></header>
     {error && <p role="alert" className="spw-admin-error">{error}</p>}
     {!session && !error && <p>Checking admin access…</p>}
     {session && !session.configured && <section className="spw-admin-card"><h2>Admin access unavailable</h2><p>Contact the site administrator to configure sign-in.</p></section>}

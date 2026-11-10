@@ -13,7 +13,7 @@ export function ProjectBrief() {
     const fields = [...new FormData(event.currentTarget)]
       .filter(([, value]) => String(value).trim())
       .map(([label, value]) => label + ': ' + String(value).trim());
-    setBrief(['EVG project brief', ...fields].join(String.fromCharCode(10)));
+    setBrief(['Safeevg project brief', ...fields].join(String.fromCharCode(10)));
     setReviewed(true);
   }
 
