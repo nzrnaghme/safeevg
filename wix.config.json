@@ -1,0 +1,11 @@
+{
+  "projectType": "Site",
+  "appId": "29b57fbf-44bd-4b83-917c-b5deae563b42",
+  "siteId": "3058f9e8-d442-4606-8f0a-0389051f794f",
+  "site": {
+    "outputDirectory": {
+      "client": "./artifacts/safe-public-works/dist/public",
+      "server": "./artifacts/safe-public-works/dist/wix-server"
+    }
+  }
+}

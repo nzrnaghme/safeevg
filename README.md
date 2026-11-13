@@ -14,7 +14,7 @@ PORT=4184 node artifacts/safe-public-works/serve.mjs
 
 Development: set PORT and BASE_PATH=/ then run `pnpm --filter @workspace/safe-public-works dev`.
 
-API: configure DATABASE_URL and SPW_ADMIN_PASSWORD (at least 16 characters) securely, then run `pnpm --filter @workspace/api-server dev`. Provision PostgreSQL with the schema in lib/db. Route /api to the API service; .replit describes the existing service routing. Never commit secrets.
+API: configure DATABASE_URL and SPW_ADMIN_PASSWORD (at least 8 characters) securely, then run `pnpm --filter @workspace/api-server dev`. Provision PostgreSQL with the schema in lib/db. Route /api to the API service; .replit describes the existing service routing. Never commit secrets.
 
 ## Data
 
