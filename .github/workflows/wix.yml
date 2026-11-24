@@ -47,7 +47,7 @@ jobs:
       cancel-in-progress: false
     environment:
       name: wix-production
-      url: https://safeevg-code-hoomansse-0c09.wix-site-host.com
+      url: https://www.safeevg.com
     steps:
       - uses: actions/setup-node@v4
         with:
@@ -71,5 +71,5 @@ jobs:
       - name: Check published pages
         run: |
           for route in / /contact /equipment /privacy; do
-            curl --fail --silent --show-error --retry 4 --retry-all-errors --retry-delay 5 "https://safeevg-code-hoomansse-0c09.wix-site-host.com${route}" -o /dev/null
+            curl --fail --location --silent --show-error --retry 4 --retry-all-errors --retry-delay 5 "https://www.safeevg.com${route}" -o /dev/null
           done
