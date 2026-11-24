@@ -110,7 +110,7 @@ export default function Admin() {
   const dirty = Boolean(saved && draft && draft !== saved.content);
 
   useEffect(() => {
-    document.title = 'Website admin | EVG';
+    document.title = 'Website admin | Safeevg';
     const meta = document.createElement('meta');
     meta.name = 'robots';
     meta.content = 'noindex, nofollow';
@@ -139,11 +139,13 @@ export default function Admin() {
   async function signIn(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
-    const password = new FormData(form).get('password');
+    const data = new FormData(form);
+    const email = data.get('email');
+    const password = data.get('password');
     setBusy(true);
     setError('');
     try {
-      await adminRequest('session', json('POST', { password }));
+      await adminRequest('session', json('POST', { email, password }));
       form.reset();
       setSession({ configured: true, authenticated: true });
     } catch (reason) { setError((reason as Error).message); }
@@ -175,11 +177,11 @@ export default function Admin() {
     finally { setBusy(false); }
   }
 
-  return <main className="spw-admin"><header><div><p>EVG</p><h1>Website admin</h1></div><a href="/" target="_blank" rel="noreferrer">View website ↗</a></header>
+  return <main className="spw-admin"><header><div><p>Safeevg</p><h1>Website admin</h1></div><a href="/" target="_blank" rel="noreferrer">View website ↗</a></header>
     {error && <p role="alert" className="spw-admin-error">{error}</p>}
     {!session && !error && <p>Checking admin access…</p>}
-    {session && !session.configured && <section className="spw-admin-card"><h2>Enable admin access</h2><p>Add a Replit Secret named <code>SPW_ADMIN_PASSWORD</code> with a unique password of at least 16 characters. Restart the project and reload this page.</p></section>}
-    {session?.configured && !session.authenticated && <form className="spw-admin-card spw-admin-signin" onSubmit={signIn}><h2>Sign in</h2><label>Admin password<input name="password" type="password" autoComplete="current-password" required maxLength={1024} /></label><button className="spw-admin-primary" disabled={busy}>Sign in</button></form>}
+    {session && !session.configured && <section className="spw-admin-card"><h2>Admin access unavailable</h2><p>Contact the site administrator to configure sign-in.</p></section>}
+    {session?.configured && !session.authenticated && <form className="spw-admin-card spw-admin-signin" onSubmit={signIn}><h2>Sign in</h2><label>Email address<input name="email" type="email" autoComplete="username" autoCapitalize="none" spellCheck={false} required maxLength={254} /></label><label>Admin password<input name="password" type="password" autoComplete="current-password" required maxLength={1024} /></label><button className="spw-admin-primary" disabled={busy}>Sign in</button></form>}
     {session?.authenticated && !draft && !error && <p>Loading website content…</p>}
     {session?.authenticated && draft && <><div className="spw-admin-toolbar"><div className="spw-admin-actions" role="group" aria-label="Content type"><button type="button" aria-pressed={panel === 'text'} onClick={() => setPanel('text')}>Website text</button><button type="button" aria-pressed={panel === 'equipment'} onClick={() => setPanel('equipment')}>Equipment</button></div>
       <div className="spw-admin-actions"><button type="button" className="spw-admin-primary" disabled={!dirty || busy} onClick={save}>{busy ? 'Working…' : 'Save changes'}</button><button type="button" disabled={busy} onClick={signOut}>Sign out</button></div></div>

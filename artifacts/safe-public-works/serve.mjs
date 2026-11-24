@@ -90,5 +90,5 @@ const server = http.createServer((req, res) => {
   res.end(req.method === "HEAD" ? undefined : body);
 });
 server.listen(Number(process.env.PORT || 22695), "0.0.0.0", () =>
-  console.log("EVG production server ready"),
+  console.log("Safeevg production server ready"),
 );

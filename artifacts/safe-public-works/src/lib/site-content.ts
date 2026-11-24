@@ -23,6 +23,8 @@ export async function fetchContent(signal?: AbortSignal): Promise<ContentSnapsho
 }
 
 export async function loadContent() {
+  // Wix static hosting uses the versioned website copy, without an admin API.
+  if (import.meta.env.VITE_STATIC_HOSTING === 'true') return;
   try { snapshot = await fetchContent(AbortSignal.timeout(2500)); }
   catch { /* The built-in website copy remains available when the API is unavailable. */ }
 }
