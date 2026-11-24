@@ -55,3 +55,30 @@ Thumbs.db
 *.key
 .wix/
 export-*
+
+# Local database data and backups (keep schema/migrations in source control)
+*.dump
+*.backup
+*.sql.gz
+*.sql.zip
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+*.db-wal
+*.db-shm
+backups/
+dumps/
+pgdata/
+.supabase/
+supabase/.temp/
+
+# Local credentials and certificate bundles
+*.p12
+*.pfx
+.pgpass
+.pg_service.conf
+.envrc
