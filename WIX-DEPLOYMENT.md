@@ -1,19 +1,18 @@
 # Wix deployment
 
-This repository publishes the manually coded website to Wix-managed Headless.
-Database/backend migration is separate; this deployment does not deploy the Replit Express API.
+This repository publishes the manually coded website to the Wix-managed Headless site **Safeevg Code** (site ID `3058f9e8-d442-4606-8f0a-0389051f794f`). The production domain is https://www.safeevg.com; the apex domain redirects there.
 
-## One-time setup
+## Automatic releases
 
-Create a Wix automation API key in the account that owns **Safeevg Code**, with the permissions required by the Wix Headless CLI to release this site. Store it in GitHub repository Settings → Secrets and variables → Actions as **WIX_API_KEY**. Never commit the key, local Wix login files, or database credentials.
+The `Wix website` GitHub Actions workflow validates pull requests targeting `main`. A push or merged pull request to `main` builds, typechecks and checks the generated routes, then publishes the build to Wix. Opening a pull request alone does not publish. A manual workflow run on `main` can retry a release; other branches cannot publish.
 
-Merge this branch into `main`. The Wix website workflow builds and checks pull requests without deployment credentials. Pushes/merges to `main` publish only after a successful build. A manual run on `main` can retry a deployment. Other branches cannot deploy.
+The repository must have an Actions secret named `WIX_API_KEY`, containing a Wix API key scoped to Safeevg Code with Wix CLI - Git Integration permission. Never commit the key, Wix login files or database credentials. Only trusted collaborators should be allowed to change workflows and merge to `main`.
 
-The initial `main` merge includes the current branding changes from `product` and the Wix hosting adapter. Publishing does not connect or purchase a custom domain. The current target is https://safeevg-code-hoomansse-0c09.wix-site-host.com.
+Successful releases check the homepage, contact, equipment and privacy routes on the production domain. Check both `build` and `deploy` jobs before treating a release as complete.
 
 ## Local verification
 
-Use Node 24.22.1+ and pnpm 10.28.2:
+Use Node 24.22.1 and pnpm 10.28.2:
 
 ```sh
 pnpm install --frozen-lockfile --ignore-scripts
@@ -23,8 +22,10 @@ node scripts/build-wix.mjs
 node scripts/check-wix-build.mjs
 ```
 
-The worker serves generated page HTML and custom 404 responses. Wix controls `/robots.txt` and `/sitemap.xml`; those require Wix SEO configuration separately. The static form currently prepares a local project brief; this workflow does not claim that Supabase form submission is connected.
+The generated worker serves page HTML and custom 404 responses. This workflow does not deploy the Replit Express API or migrate a database. The repository's static form prepares a local project brief; deployment does not itself establish Supabase submission. Wix controls its sitemap and robots endpoints separately.
 
 ## Recovery
 
-If build/checks fail, the current live site is untouched. If authentication fails, check the repository secret and API-key permissions. To revert a published change, revert its commit on `main`; the successful workflow republishes the resulting code. Deployments are serialized so a running release is not interrupted.
+Build or validation failures prevent deployment. For authentication failures, check the secret and its site permissions. Deployments are serialized. To roll back, revert the unwanted commit on `main` and let the workflow publish the resulting code.
+
+Domain DNS and business email records are not changed by this workflow.
